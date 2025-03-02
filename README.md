@@ -1,3 +1,4 @@
 # dio-github-desafio
-Desafio Dio Git/GitHub :dart:
+Desafio Dio Git/GitHub
 
+Vamos progredindo em direção ao alvo! :dart:

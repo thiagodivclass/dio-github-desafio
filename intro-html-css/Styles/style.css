@@ -23,7 +23,7 @@ main h2 {
     width: 450px;
     height: 250px;
     text-align: justify;
-    margin: auto;
+    margin:15px auto;
     padding: 7px;
     background-color:#fff;
     background-image: url(../Imagens/img1.JPEG);
@@ -37,8 +37,8 @@ main h2 {
 
  main p {
     width: 450px;
-    height: 250px;
+    text-indent: 30px;
     text-align: justify;
-    margin: auto;
+    margin:20px auto;
     
  }

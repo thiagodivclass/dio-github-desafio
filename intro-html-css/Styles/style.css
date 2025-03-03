@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: silver;
+    height: 10vh;
+    padding: 15px;
+    text-align: center;
+}
+
+main h2 {
+    text-align: center;
+    margin: 5px;
+    color: blueviolet;
+}
+ main p#img{
+    width: 450px;
+    height: 250px;
+    text-align: justify;
+    margin: auto;
+    padding: 7px;
+    background-color:#fff;
+    background-image: url(../Imagens/img1.JPEG);
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: 8px;
+    box-shadow: 1px 2px 2px 1px rgba(128, 128, 128, 0.575);
+ }
+
+ main p {
+    width: 450px;
+    height: 250px;
+    text-align: justify;
+    margin: auto;
+    
+ }

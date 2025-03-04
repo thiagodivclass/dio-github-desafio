@@ -1,1 +1,45 @@
 @charset "UTEF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: black;
+    color: darkgray;
+}
+header{
+    text-align: center;
+    padding: 10px;
+}
+
+main #counter{
+    text-align: center;
+}
+
+main #counter p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main #counter button{
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    background-color: rgb(175, 173, 173);
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+#counter button:hover{
+    background-color: rgb(235, 232, 232);
+}
+
+#numero{
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 10px;
+}

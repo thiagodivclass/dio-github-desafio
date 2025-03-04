@@ -36,32 +36,72 @@
 
 
 
+// const form = document.getElementById('task-form');
+// const taskList = document.getElementById('tasks');
+
+// form.onsubmit = function (e) {
+// 	e.preventDefault();
+// 	const inputField = document.getElementById('task-input');
+// 	addTask(inputField.value);
+// 	form.reset();
+// };
+
+// function addTask(description) {
+// 	const taskContainer = document.createElement('div');
+// 	const newTask = document.createElement('input');
+// 	const taskLabel = document.createElement('label');
+// 	const taskDescriptionNode = document.createTextNode(description);
+
+// 	newTask.setAttribute('type', 'checkbox');
+// 	newTask.setAttribute('name', description);
+// 	newTask.setAttribute('id', description);
+
+// 	taskLabel.setAttribute('for', description);
+// 	taskLabel.appendChild(taskDescriptionNode);
+
+// 	taskContainer.classList.add('task-item');
+// 	taskContainer.appendChild(newTask);
+// 	taskContainer.appendChild(taskLabel);
+
+// 	taskList.appendChild(taskContainer);
+// }
+
 const form = document.getElementById('task-form');
 const taskList = document.getElementById('tasks');
 
 form.onsubmit = function (e) {
-	e.preventDefault();
-	const inputField = document.getElementById('task-input');
-	addTask(inputField.value);
-	form.reset();
+    e.preventDefault();
+    const inputField = document.getElementById('task-input');
+    addTask(inputField.value);
+    form.reset();
 };
 
 function addTask(description) {
-	const taskContainer = document.createElement('div');
-	const newTask = document.createElement('input');
-	const taskLabel = document.createElement('label');
-	const taskDescriptionNode = document.createTextNode(description);
+    const taskContainer = document.createElement('div');
+    const newTask = document.createElement('input');
+    const taskLabel = document.createElement('label');
+    const taskDescriptionNode = document.createTextNode(description);
 
-	newTask.setAttribute('type', 'checkbox');
-	newTask.setAttribute('name', description);
-	newTask.setAttribute('id', description);
+    newTask.setAttribute('type', 'checkbox');
+    newTask.setAttribute('name', description);
+    newTask.setAttribute('id', description);
+    
+    taskLabel.setAttribute('for', description);
+    taskLabel.style.marginLeft = '8px'; // Adiciona espaço entre o checkbox e o texto
+    taskLabel.appendChild(taskDescriptionNode);
 
-	taskLabel.setAttribute('for', description);
-	taskLabel.appendChild(taskDescriptionNode);
+    // Adiciona um evento para riscar o texto quando o checkbox for marcado
+    newTask.addEventListener('change', function () {
+        if (this.checked) {
+            taskLabel.style.textDecoration = 'line-through';
+        } else {
+            taskLabel.style.textDecoration = 'none';
+        }
+    });
 
-	taskContainer.classList.add('task-item');
-	taskContainer.appendChild(newTask);
-	taskContainer.appendChild(taskLabel);
+    taskContainer.classList.add('task-item');
+    taskContainer.appendChild(newTask);
+    taskContainer.appendChild(taskLabel);
 
-	taskList.appendChild(taskContainer);
+    taskList.appendChild(taskContainer);
 }

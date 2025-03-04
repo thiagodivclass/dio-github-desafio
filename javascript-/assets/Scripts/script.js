@@ -1,8 +1,7 @@
-let botaoMais = document.querySelector('#adic')
-let botaoMenos = document.querySelector('#subtr')
+let botao = { menos:document.querySelector('#subtr'), mais:document.querySelector('#adic')} 
 let resposta = document.querySelector('#numero')
-botaoMais.addEventListener('click', increment)
-botaoMenos.addEventListener('click', decrement)
+botao.mais.addEventListener('click', increment)
+botao.menos.addEventListener('click', decrement)
 
 
 

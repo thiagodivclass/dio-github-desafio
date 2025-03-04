@@ -87,10 +87,10 @@ function addTask(description) {
     newTask.setAttribute('id', description);
     
     taskLabel.setAttribute('for', description);
-    taskLabel.style.marginLeft = '8px'; // Adiciona espaço entre o checkbox e o texto
+    taskLabel.style.marginLeft = '8px'; // Adiciona espaço checkbox
     taskLabel.appendChild(taskDescriptionNode);
 
-    // Adiciona um evento para riscar o texto quando o checkbox for marcado
+    // Riscar o texto quando o checkbox for marcado
     newTask.addEventListener('change', function () {
         if (this.checked) {
             taskLabel.style.textDecoration = 'line-through';

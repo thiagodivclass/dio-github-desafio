@@ -9,9 +9,13 @@
 <body>
     <header><h1>Lista de tarefas:</h1></header>
     <main>
-        <div class="list-container">
-            <p><input type="text" name="item" id="item"> <button id="adic">Adicionar</button> </p>
-            <p><select name="lista" id="lista" size="15"></select></p>
+        <div class="list-container" id="list">
+            <form id="task-form">
+                <input type="text" name="item" id="task-input" placeholder="Digite sua tarefa"> <button id="adic" type="submit">Adicionar</button> 
+            </form>
+
+            <div id="tasks"></div>
+            
 
         </div>
     </main>

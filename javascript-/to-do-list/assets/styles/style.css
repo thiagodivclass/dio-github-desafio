@@ -27,7 +27,7 @@ main .list-container{
     padding: 25px;
 }
 
-#item{
+#task-input{
     height: 25px;
     background-color:#4abbeb;
     border: none;
@@ -58,9 +58,12 @@ main .list-container{
 
 }
 
-#lista {
+#tasks {
     width: 238px;
+    height: 40vh;
     margin-top: 10px;
+    padding: 15px;
+    font-weight: bold;
     overflow: auto;
     scrollbar-width: none;
     background-color:#81c8e7;

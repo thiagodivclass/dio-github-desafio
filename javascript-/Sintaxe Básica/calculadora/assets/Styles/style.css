@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    background-color: #000;
+    color: #fff;
+}
+.result-container{
+   
+    display: flex;
+    align-items: center;
+    height: 50vh;
+}
+#result{
+
+text-align: center;
+height: 200px;
+width: 500px;
+margin: 15px auto;
+}
+
+#newcalc{
+    height: 50vh;
+    width: 90vw;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:baseline;
+    align-items: center;
+}

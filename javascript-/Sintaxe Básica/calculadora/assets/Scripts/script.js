@@ -1,5 +1,7 @@
 let resposta = document.querySelector('#resp')
-let botao ={sim:document.querySelector('#yes'), nao:document.querySelector('#no')}
+let botao ={sim:document.querySelector('#yes'),
+             nao:document.querySelector('#no')}
+             
 botao.sim.addEventListener('click', novo)
 botao.nao.addEventListener('click', fim)
 
@@ -16,45 +18,39 @@ function calculadora() {
 
         function soma() {
             resultado = n1 + n2
-            resposta.innerHTML = `${n1} + ${n2} = ${resultado}`
-            novaop()
+            resposta.innerHTML = `${n1} + ${n2} = ${resultado}`           
 
 
         }
 
         function sub() {
             resultado = n1 - n2
-            resposta.innerHTML = `${n1} - ${n2} = ${resultado}`
-            novaop()
+            resposta.innerHTML = `${n1} - ${n2} = ${resultado}`            
 
         }
 
         function mult() {
             resultado = n1 * n2
-            resposta.innerHTML = `${n1} x ${n2} = ${resultado}`
-            novaop()
+            resposta.innerHTML = `${n1} x ${n2} = ${resultado}`            
 
         }
 
         function diviIn() {
             resultado = n1 / n2
-            resposta.innerHTML = `${n1} / ${n2} = ${resultado}`
-            novaop()
+            resposta.innerHTML = `${n1} / ${n2} = ${resultado}`            
 
         }
 
         function diviReal() {
             resultado = n1 % n2
-            resposta.innerHTML = `O resto da divisão entre ${n1} e ${n2} é = ${resultado}`
-            novaop()
+            resposta.innerHTML = `O resto da divisão entre ${n1} e ${n2} é = ${resultado}`            
 
         }
 
         function potenc() {
             resultado = n1 ** n2
             resposta.innerHTML = `${n1} elevado a ${n2} = ${resultado}`
-            novaop()
-
+            
         }
 
 

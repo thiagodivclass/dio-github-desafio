@@ -1,7 +1,9 @@
 let resposta = document.querySelector('#resp')
-let botao ={sim:document.querySelector('#yes'),
-             nao:document.querySelector('#no')}
-             
+let botao = {
+    sim: document.querySelector('#yes'),
+    nao: document.querySelector('#no')
+}
+
 botao.sim.addEventListener('click', novo)
 botao.nao.addEventListener('click', fim)
 
@@ -15,87 +17,95 @@ function calculadora() {
         let n1 = Number(prompt('Insira o primeiro valor:'))
         let n2 = Number(prompt('Insira o segundo valor:'))
         let resultado
+        if (!n1 || !n2) {
+            alert('Parâmetros inválidos!')
+            calculadora()
+        }
+        else {
+            function soma() {
+                resultado = n1 + n2
+                resposta.innerHTML = `${n1} + ${n2} = ${resultado}`
 
-        function soma() {
-            resultado = n1 + n2
-            resposta.innerHTML = `${n1} + ${n2} = ${resultado}`           
+
+            }
+
+            function sub() {
+                resultado = n1 - n2
+                resposta.innerHTML = `${n1} - ${n2} = ${resultado}`
+
+            }
+
+            function mult() {
+                resultado = n1 * n2
+                resposta.innerHTML = `${n1} x ${n2} = ${resultado}`
+
+            }
+
+            function diviIn() {
+                resultado = n1 / n2
+                resposta.innerHTML = `${n1} / ${n2} = ${resultado}`
+
+            }
+
+            function diviReal() {
+                resultado = n1 % n2
+                resposta.innerHTML = `O resto da divisão entre ${n1} e ${n2} é = ${resultado}`
+
+            }
+
+            function potenc() {
+                resultado = n1 ** n2
+                resposta.innerHTML = `${n1} elevado a ${n2} = ${resultado}`
+
+            }
 
 
+
+            switch (operacao) {
+                case 1:
+                    soma()
+                    break
+                case 2:
+                    sub()
+                    break
+                case 3:
+                    mult()
+                    break
+                case 4:
+                    diviIn()
+                    break
+                case 5:
+                    diviReal()
+                    break
+                case 6:
+                    potenc()
+                    break
+                default:
+                    alert('Valor inválido!')
+                    calculadora()
+
+            }
         }
 
-        function sub() {
-            resultado = n1 - n2
-            resposta.innerHTML = `${n1} - ${n2} = ${resultado}`            
-
-        }
-
-        function mult() {
-            resultado = n1 * n2
-            resposta.innerHTML = `${n1} x ${n2} = ${resultado}`            
-
-        }
-
-        function diviIn() {
-            resultado = n1 / n2
-            resposta.innerHTML = `${n1} / ${n2} = ${resultado}`            
-
-        }
-
-        function diviReal() {
-            resultado = n1 % n2
-            resposta.innerHTML = `O resto da divisão entre ${n1} e ${n2} é = ${resultado}`            
-
-        }
-
-        function potenc() {
-            resultado = n1 ** n2
-            resposta.innerHTML = `${n1} elevado a ${n2} = ${resultado}`
-            
-        }
 
 
+    }
 
-        switch (operacao) {
-            case 1:
-                soma()
-                break
-            case 2:
-                sub()
-                break
-            case 3:
-                mult()
-                break
-            case 4:
-                diviIn()
-                break
-            case 5:
-                diviReal()
-                break
-            case 6:
-                potenc()
-                break
-            default:
-                alert('Valor inválido!')
-                calculadora()
-
-        }
-
-    } else {
+    else {
         alert('Opção inválida.')
         calculadora()
     }
 
 }
 
-    function novo() {
-        calculadora();
-       
-    }
-
-    function fim(){
-    resposta.innerHTML = 'Ok, até mais!'    
-
-    }
-    
+function novo() {
     calculadora();
-    
+
+}
+
+function fim() {
+    resposta.innerHTML = 'Ok, até mais!'
+
+}
+
+calculadora();

@@ -7,6 +7,16 @@ let res = document.querySelector('#return')
 
 botao.addEventListener('click', compare)
 
+let reset = document.querySelector('#limp')
+reset.addEventListener('click', resete)
+
+function resete(){
+    res.innerHTML=''
+    numero.um.value=''
+    numero.dois.value=''
+    numero.um.focus()
+}
+
 
 function compare() {
 
@@ -18,20 +28,29 @@ function compare() {
     }
     else {
 
-        if (a === b && a + b < 10) {
-            res.innerHTML = `Os números ${a} e ${b} são iguais, e, somando os dois, temos ${a + b}, que é menor do que 10.`
-        } else if (a === b && a + b >= 10 && a + b <= 20) {
-            res.innerHTML = `Os números ${a} e ${b} são iguais, e, somando os dois, temos ${a + b}, que é entre 10 e 20.`
-        } else if (a === b && a + b > 20) {
-            res.innerHTML = `Os números ${a} e ${b} são iguais, e, somando os dois, temos ${a + b}, que é maior do que 20.`
-        } else if (a !== b && a + b < 10) {
-            res.innerHTML = `Os números ${a} e ${b} são diferentes, e, somando os dois, temos ${a + b}, que é menor do que 10.`
-        } else if (a !== b && a + b >= 10 && a + b <= 20) {
-            res.innerHTML = `Os números ${a} e ${b} são diferentes, e, somando os dois, temos ${a + b}, que é entre 10 e 20.`
-        } else if (a !== b && a + b > 20) {
-            res.innerHTML = `Os números ${a} e ${b} são diferentes, e, somando os dois, temos ${a + b}, que é maior do que 20.`
+        if(a===b && a+b < 10){
+            res.innerHTML=`Os números ${a} e ${b} São iguais, e, somando os dois, temos ${a+b}, que é menor do que 10 e menor do que 20.`
         }
 
+        if(a===b && a+b >= 10 && a+b <= 20){
+            res.innerHTML=`Os números ${a} e ${b} São iguais, e, somando os dois, temos ${a+b}, que está entre 10 e 20.`
+        }
+
+        if(a===b && a+b > 20){
+            res.innerHTML=`Os números ${a} e ${b} São iguais, e, somando os dois, temos ${a+b}, que é maior do que 10 e maior do que 20.`
+        }
+
+        if(a!==b && a+b > 20){
+            res.innerHTML=`Os números ${a} e ${b} São diferentes, e, somando os dois, temos ${a+b}, que é maior do que 10 e maior do que 20.`
+        }
+
+        if(a!==b && a+b <= 20 && a+b >= 10){
+            res.innerHTML=`Os números ${a} e ${b} São diferentes, e, somando os dois, temos ${a+b}, que está entre 10 e 20.`
+        }
+
+        if(a!==b && a+b < 10){
+            res.innerHTML=`Os números ${a} e ${b} São diferentes, e, somando os dois, temos ${a+b}, que é menor do que 10 e menor do que 20.`
+        }
 
     }
 

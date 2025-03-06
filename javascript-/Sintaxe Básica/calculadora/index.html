@@ -9,23 +9,23 @@
 </head>
 
 <body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
     <div class="result-container">
-        <div id="result"></div>    
-    </div>
-    <div id="newcalc">
-                
-        <p>Deseja realizar outra operação?</p>
-        <form id="novocalc">
-           <select name="opcoes" id="opcoes">
-            <option disabled>Selecione uma opção</option>
-            <option value="0">Sim</option>
-            <option value="1">Não</option>
-            <input type="submit" value="Confirmar">
-           </select>
-            
-        </form>
+
+        <div id="result">
+            <p>Resultado:</p>
+            <p id="resp">55</p>
+        </div>
+
+        <div id="newcalc">
     
-</div>
+            <p>Deseja realizar outra operação?</p>
+            <p><button id="yes">Sim</button> <button id="no">Não</button></p>
+    
+        </div>
+    </div>
 
     <script src="assets/Scripts/script.js"></script>
 </body>

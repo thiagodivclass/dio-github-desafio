@@ -9,18 +9,29 @@ body{
     background-color: #000;
     color: #fff;
 }
+header {
+    text-align: center;
+    color: silver;
+}
+
 .result-container{
    
     display: flex;
+    flex-flow: column nowrap;
     align-items: center;
     height: 50vh;
 }
 #result{
-
+color: silver;
 text-align: center;
 height: 200px;
 width: 500px;
 margin: 15px auto;
+font-weight: bold;
+}
+
+#result #resp{
+    font-size: 1.5em;
 }
 
 #newcalc{
@@ -30,4 +41,21 @@ margin: 15px auto;
     flex-flow: column nowrap;
     justify-content:baseline;
     align-items: center;
+    color: silver;
+}
+
+
+#newcalc button{
+    font-size: 1em;
+    background-color: rgb(155, 148, 148);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#newcalc button:hover{
+    background-color: rgb(238, 231, 231);
+    transform: translateY(-2px) translateX(-1px);
+    transition: .3s;   
 }

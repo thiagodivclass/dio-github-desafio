@@ -1,4 +1,7 @@
-let resposta = document.querySelector('#result')
+let resposta = document.querySelector('#resp')
+let botao ={sim:document.querySelector('#yes'), nao:document.querySelector('#no')}
+botao.sim.addEventListener('click', novo)
+botao.nao.addEventListener('click', fim)
 
 function calculadora() {
 
@@ -86,23 +89,17 @@ function calculadora() {
         calculadora()
     }
 
-
-    function novaop() {
-        let option = document.querySelector('#opcoes')
-
-        if (option =0 ) {
-            calculadora();
-        }
-        if (option =1 ) {
-            resposta.innerHTML = 'Ok, até mais!'
-        }
-        else {
-            alert('Selecione uma opção e confirme!')
-        }
-    }
-
-
 }
 
+    function novo() {
+        calculadora();
+       
+    }
 
-calculadora();
+    function fim(){
+    resposta.innerHTML = 'Ok, até mais!'    
+
+    }
+    
+    calculadora();
+    

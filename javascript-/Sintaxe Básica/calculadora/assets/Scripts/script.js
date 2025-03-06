@@ -79,11 +79,8 @@ function calculadora() {
                     break
                 case 6:
                     potenc()
-                    break
-                default:
-                    alert('Valor inválido!')
-                    calculadora()
-
+                    
+                
             }
         }
 

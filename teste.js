@@ -37,9 +37,9 @@
 // console.log(!bool)
 
 
-var array = [1,2,5,3]
-array.push('push-final')
-array.unshift(0)
+// var array = [1,2,5,3]
+// array.push('push-final')
+// array.unshift(0)
 /*
 push adiciona no fim
 unshift adiciona no início
@@ -51,15 +51,18 @@ sort ordena
 // console.log(i)
 // console.log(array[i])
 
-function palindromo(string){
-    if(!string) return;
+// function palindromo(string){
+//     if(!string) return;
 
-    return string.split('').reverse().join('') === string;
+//     return string.split('').reverse().join('') === string;
     
     
      
-}
+// }
 
-console.log(palindromo('socorrammesubinoonibusemmarrocosl'))
+// console.log(palindromo('socorrammesubinoonibusemmarrocosl'))
 
- 
+
+const meuObjeto = { chave: valor } 
+console.log(meuObjeto.chave); 
+console.log(meuObjeto[chave])

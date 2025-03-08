@@ -62,7 +62,13 @@ sort ordena
 
 // console.log(palindromo('socorrammesubinoonibusemmarrocosl'))
 
+// Funcão autoinvocável:
+// (function(){
+//     let nome = 'Thiago Madeira'
+//     return console.log(nome)
+// })();
 
-const meuObjeto = { chave: valor } 
-console.log(meuObjeto.chave); 
-console.log(meuObjeto[chave])
+(function(a, b){
+    let nome = a*b
+    return console.log(nome)
+})(3,10);

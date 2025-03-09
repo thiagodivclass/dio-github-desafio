@@ -66,9 +66,32 @@ sort ordena
 // (function(){
 //     let nome = 'Thiago Madeira'
 //     return console.log(nome)
-// })();
+// // })();
 
-(function(a, b){
-    let nome = a*b
-    return console.log(nome)
-})(3,10);
+// (function(a, b){
+//     let nome = a*b
+//     return console.log(nome)
+// })(3,10);
+
+
+// function logLetras(palavra){
+//     for(letra of palavra){
+//         console.log(letra)
+//     }
+// }
+// const palavra ="Thiago"
+// // logLetras(palavra) 
+
+
+// function logNum(manga){
+//     for(leite of manga){
+//         console.log(leite)
+//     }
+// }
+// const manga = [30,25,38,45,80,59]
+
+// logNum(manga)
+
+const thi = () => `Thiago Madeira ${2+2+6}`
+
+console.log(thi())

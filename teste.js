@@ -92,6 +92,6 @@ sort ordena
 
 // logNum(manga)
 
-const thi = () => `Thiago Madeira ${2+2+6}`
+// const thi = () => `Thiago Madeira ${2+2+4+4}` Arrow Function
 
-console.log(thi())
+// console.log(thi())
